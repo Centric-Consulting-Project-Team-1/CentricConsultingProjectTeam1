@@ -55,7 +55,6 @@ namespace CentricConsultingProjectTeam1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             return View(recognize);
         }
 

@@ -15,7 +15,7 @@ namespace CentricConsultingProjectTeam1.Models
         public enum TxtorEmail { Text, Email }
         public TxtorEmail MessageOption { get; set; }
         public string Message { get; set; }
-
+        public virtual Profile Profile { get; set; }
 
     }
 }

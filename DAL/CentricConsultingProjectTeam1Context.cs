@@ -13,7 +13,7 @@ namespace CentricConsultingProjectTeam1.DAL
         {
 
         }
-        public DbSet<Profile> Profiles { get; set; }
+        public DbSet<Profile> profiles { get; set; }
         public DbSet<Recognize> Recognizes { get; set; }
 
     }

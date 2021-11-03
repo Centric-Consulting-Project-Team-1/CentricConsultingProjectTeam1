@@ -18,7 +18,7 @@ namespace CentricConsultingProjectTeam1.Controllers
         // GET: Profiles
         public ActionResult Index()
         {
-            return View(db.Profiles.ToList());
+            return View(db.profiles.ToList());
         }
 
         // GET: Profiles/Details/5
@@ -28,7 +28,7 @@ namespace CentricConsultingProjectTeam1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Profile profile = db.Profiles.Find(id);
+            Profile profile = db.profiles.Find(id);
             if (profile == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace CentricConsultingProjectTeam1.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Profiles.Add(profile);
+                db.profiles.Add(profile);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace CentricConsultingProjectTeam1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Profile profile = db.Profiles.Find(id);
+            Profile profile = db.profiles.Find(id);
             if (profile == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace CentricConsultingProjectTeam1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Profile profile = db.Profiles.Find(id);
+            Profile profile = db.profiles.Find(id);
             if (profile == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace CentricConsultingProjectTeam1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Profile profile = db.Profiles.Find(id);
-            db.Profiles.Remove(profile);
+            Profile profile = db.profiles.Find(id);
+            db.profiles.Remove(profile);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
